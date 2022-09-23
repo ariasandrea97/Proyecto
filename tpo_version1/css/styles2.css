@@ -1,0 +1,195 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para Box Model **/
+    scroll-snap-type: y mandatory;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );
+}
+
+header{
+    /*background-image: url(../img/cancun.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;*/
+   /*position: relative;*/
+   /* margin-bottom: 2rem; */
+}
+img{
+	float:left;
+    max-width: 100%;
+}
+
+/* Navegacion Principal */
+.nav-bg {
+    background-color: var(--secundario);
+}
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a {
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+
+.hero {
+    background-image: url(../img/paisaje1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/* contenedor  */ 
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/*
+@media (min-width:480px) {*/
+    .tres-columnas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+    }
+/*}*/
+
+
+/*Tamaño de tablet*/
+@media only screen and (max-width: 700px){
+    .tres-columnas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+
+}
+
+/*Tamaño de celular*/
+@media only screen and (max-width: 500px){
+    .tres-columnas {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 2rem;
+    }
+
+}
+
+
+/** Contacto **/
+.formulario {
+    background-color: var(--gris);
+    width: min( 60rem, 100% ); /** Utilizar el valor más pequeño **/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+
+.campo {
+    margin-bottom: 1rem;
+}
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.campo textarea {
+    height: 20rem;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.flex {
+    display: flex;
+}
+.alinear-derecha {
+    justify-content: flex-end;
+}
+
+
+/** Footer **/
+.footer {
+    text-align: center;
+}
+
+footer{
+	height:60px;
+	background-color:#4D4D4D;
+	line-height:60px;
+	text-align:center;
+	color:white;
+}
