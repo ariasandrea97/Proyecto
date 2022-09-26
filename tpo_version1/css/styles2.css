@@ -1,8 +1,8 @@
 :root {
     --blanco: #ffffff;
     --oscuro: #212121;
-    --primario: #FFC107;
-    --secundario: #0097A7;
+    --primario: #2b06af;
+    --secundario: #060d6b;
     --gris: #757575;
     --grisClaro: #DFE9F3;
 }
@@ -14,66 +14,139 @@ html {
 }
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-size: 16px; /* 1rem = 10px */
     font-family: 'Krub', sans-serif;
-    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );
+    /*background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% ); */
+    margin: auto;
 }
 
-header{
-    /*background-image: url(../img/cancun.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100px;*/
-   /*position: relative;*/
-   /* margin-bottom: 2rem; */
-}
 img{
 	float:left;
     max-width: 100%;
 }
 
+
 /* Navegacion Principal */
 .nav-bg {
-    background-color: var(--secundario);
+    background-color: var(--primario);
 }
 .navegacion-principal {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    
+    flex-direction: column  ;
+    text-align: center;  
 }
 @media (min-width: 768px) {
     .navegacion-principal {
         flex-direction: row;
         justify-content: space-between;
     }
+
 }
 
 .navegacion-principal a {
     display: block;
-    text-align: center;
+    text-align:center;
     color: var(--blanco);
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 30px; /* 2rem; */
+    width: 20%;
     font-weight: 700;
     padding: 1rem;
 }
 .navegacion-principal a:hover {
-    background-color: var(--primario);
-    color: var(--oscuro);
+    background-color: var(--secundario);
+    color: var(--blanco);
+    /*opacity:  .7; */
+}
+.navegacion-principal span{
+    font-size: 20px;
+}
+.navegacion-principal h1{
+    font-size:30px;
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+}
+.navegacion-principal i{
+    color: rgb(255, 255, 255);
+  }
+
+/*Tipografia */
+h1, h3{
+    text-align: left;
+}
+h1{
+	font-size:30px;
+}
+/* Titulos */
+.titulos h1, h2 {
+    text-align: center; 
 }
 
 
+
+/* Hero */
 .hero {
-    background-image: url(../img/paisaje1.jpg);
+    background-image: url(../img/fondo2.png);
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover; /*para que tome todo el ancho disponible */
     height: 450px;
     position: relative;
     margin-bottom: 2rem;
+}
+
+.contenido-hero {
+    position: absolute;
+  /*  background-color: rgba( 0,0,0, .7 ); */
+  /*  background-color: rgba(209, 201, 201, 0.7);*/
+    width: 98%;
+    height: 92%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.contenido-hero h2 {
+    color:rgb(52, 25, 102); /*var(--blanco);*/
+    font-size: 40px;
+    font-style: italic;
+    
+    position: absolute;
+    top: 20%;
+    left: 40%;
+}
+.contenido-hero .ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+.contenido-hero h3 {
+    font-size: 50px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+}
+
+.texto-encima{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+   /* top: 10px;
+    left: 10px;*/
+    transform: translate(-50%, -50%);
+    font-size:30px;
+    color: rgb(255, 255, 255);
+}
+.contenedor2{  /* actividades.html   */
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* contenedor  */ 
@@ -81,6 +154,7 @@ img{
     max-width: 1200px;
     width: 95%;
     margin: 0 auto;
+
 }
 
 .entrada-blog a {
@@ -91,7 +165,10 @@ img{
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 12px;
 }
+
+
 /*
 @media (min-width:480px) {*/
     .tres-columnas {
@@ -187,9 +264,19 @@ legend {
 }
 
 footer{
-	height:60px;
-	background-color:#4D4D4D;
+	height: 60px;
+	background-color:#333131;
 	line-height:60px;
 	text-align:center;
-	color:white;
+	color:rgb(242, 242, 247);
+}
+
+
+
+footer span{
+    color: black;   
+}
+
+footer i{
+    color:black;
 }
